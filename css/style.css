@@ -1,0 +1,239 @@
+
+
+body{
+	margin:0;
+	padding: 0;
+}
+
+.sliderContainer{
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	height: auto;
+	/*background: red;*/
+}
+
+.wrapper{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 2000px;
+	height: auto;
+	overflow: hidden;
+}
+
+.card{
+	width: 13%;
+	margin:7px;
+	float: left;
+	height: auto;
+	border-radius: 10px;
+	background: #ebebeb;
+	border: 1px solid #cfcfcf;
+	display: block;
+	text-align: center;
+	transition: transform 0.1s;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px 0px #cfcfcf;
+}
+
+.card:hover{
+	transform: scale(1.02);
+}
+
+.card .card-img{
+	width: 100%;
+	text-align: center;
+	
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} 
+.card .card-img img{
+	width: 80%;	
+}
+
+.card .imgCaption{
+	background: white;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px; 
+	border-radius: 0px 0px 10px 10px;
+}
+.card .imgCaption a, p{
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+#left-btn{
+	position: absolute;	
+	width: 100px;
+	height: 100%;
+	z-index: 1;
+	top:0;
+	left:25px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#right-btn{
+	position: absolute;	
+	width: 100px;
+	height: 100%;
+	top: 0;
+	right: 25px;
+	text-align: center;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;	
+}
+
+.round-btn{
+	background: white;
+	padding: 12px 19px;
+	border-radius: 50%;
+	user-select: none;
+	cursor: pointer;
+	box-shadow: 5px 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------- overLay Slider -------------------------------------------------------------------- */
+
+.closeBtn-overlay{
+	position: absolute;
+	padding: 10px 15px;
+	border-radius: 50%;
+	box-shadow: 5px 0px 10px 5px #dedcdc;
+	background: #fff;
+	z-index: 999;
+	top:5%;
+	right: 5%;
+	cursor: pointer;
+}
+.overlay-slider{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	left:0px;	
+	overflow: hidden;
+	z-index:1;
+	background: #000;
+}
+
+.overlay-wrapper{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;			
+}
+
+.swiper-container-3d {
+    perspective: 1200px;
+
+}
+
+.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
+    transform-style: preserve-3d;
+}
+
+.overlay-card{
+	float: left;	
+	margin:0 auto;
+	user-select: none;
+	height: 100%;
+	
+	background: #ebebeb;
+	border: 1px solid #cfcfcf;
+	text-align: center;
+	transition: transform 0.1s;
+	overflow: hidden;
+	
+	-webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-card .overlay-card-img{
+	margin:0 auto;
+	text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 80%;
+	
+} 
+.overlay-card .overlay-card-img img{
+	height: 50%;
+}
+
+.overlay-card .overlay-imgCaption{
+	background: white;
+	height: 20%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+.overlay-card .overlay-imgCaption p{
+	text-decoration: none;
+	font-size: 0.9em;
+	margin: 0 auto;
+	padding: 2px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+/*--------------------------------------------------------- Overlay Slider Closed--------------------------------------------------*/
+
+@media screen and (max-width: 660px) {
+	.card{
+		margin:2px;
+	}
+
+	#left-btn, #right-btn{
+		visibility: hidden;
+	}
+}		
